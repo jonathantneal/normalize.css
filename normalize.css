@@ -13,7 +13,7 @@ header,
 hgroup,
 nav,
 section {
-  display: block;
+	display: block;
 }
 
 /*
@@ -55,12 +55,10 @@ html {
 
 /*
  * Remove margin and hide overflow from <body> element
- * Margin overflow displayed incorrectly in IE6/7
 */
 
 body {
 	margin: 0;
-	overflow: hidden;
 }
 
 /*
@@ -211,7 +209,7 @@ sup {
 	font-size: 75%;
 	line-height: 0;
 	position: relative;
-	vertical-align: middle;
+	vertical-align: baseline;
 }
 
 sup {
@@ -219,7 +217,7 @@ sup {
 }
 
 sub {
-	bottom: -0.5em;
+	bottom: -0.25em;
 }
 
 /*
@@ -232,15 +230,21 @@ legend {
 }
 
 /*
+ * 1.
  * Remove margin from form elements
  * Fixes margin displayed oddly in C10 S5
+ * 2.
+ * Define vertical-align for form elements
+ * Fixes alignment in IE and <textarea> alignment in FF3/4
+ * 
 */
 
 button,
 input,
 select,
 textarea {
-	margin: 0;
+	margin: 0; /* 1 */
+	vertical-align: baseline; /* 2 */
 }
 
 /*
@@ -266,13 +270,19 @@ input::-moz-focus-inner {
 }
 
 /*
+ * 1.
  * Disable default vertical scrollbar for <textarea> element
  * Fixes scrollbar displayed oddly in IE6/7/8/9
+ * 2.
+ * Align <textarea> with text-top when inline
+ * Improves readability and fixes FF3/4 failure to align with baseline
 */
 
 textarea {
-	overflow: auto;
+	overflow: auto; /* 1 */
+	vertical-align: text-top; /* 2 */
 }
+
 
 /*
  * Define box sizing for <input> <select> <textarea> element
