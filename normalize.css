@@ -54,6 +54,17 @@ html {
 }
 
 /*
+ * Fixes text size displayed oddly during orientation change in handheld iOS
+*/
+
+@media screen and (max-device-width: 480px) {
+	html {
+		-ms-text-size-adjust: none;
+		-webkit-text-size-adjust: none;
+	}
+}
+
+/*
  * Remove margin and hide overflow from <body> element
  * Margin overflow displayed incorrectly in IE6/7
 */
