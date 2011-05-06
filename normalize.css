@@ -54,7 +54,7 @@ html {
 }
 
 /*
- * Fixes text size displayed oddly during orientation change in handheld iOS
+ * Fixes text size displayed oddly after orientation change in handheld browsers
 */
 
 @media screen and (max-device-width: 480px) {
@@ -66,12 +66,10 @@ html {
 
 /*
  * Remove margin and hide overflow from <body> element
- * Margin overflow displayed incorrectly in IE6/7
 */
 
 body {
 	margin: 0;
-	overflow: hidden;
 }
 
 /*
@@ -103,9 +101,6 @@ a:hover {
 
 audio {
 	display: none;
-}
-
-audio[controls] {
 	_display: expression(this.controls ? 'inline' : 'none');
 }
 
@@ -247,6 +242,11 @@ input,
 select,
 textarea {
 	margin: 0;
+}
+
+input,
+textarea {
+	*margin: expression(/text|password|file/.test(this.type) ? this.runtimeStyle.margin = '-1px 0' : 0);
 }
 
 /*
