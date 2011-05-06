@@ -22,16 +22,10 @@ section {
 */
 
 audio[controls],
-button,
 canvas,
-img,
-input,
-select,
-textarea,
 video {
 	display: inline-block;
 	*display: inline;
-	vertical-align: baseline;
 	*zoom: 1;
 }
 
