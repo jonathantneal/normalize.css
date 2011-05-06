@@ -45,27 +45,22 @@ video {
  * 3.
  * Remove text size adjust tap color for <html> element
  * Fixes tap color displayed oddly in iOS
+ * 4.
+ * Make text size adjust 100% for <html> element
+ * Fixes text size displayed oddly after orientation change in handheld browsers
 */
 
 html {
 	cursor: default; /* 1 */
 	overflow-y: scroll; /* 2 */
 	-webkit-tap-highlight-color: transparent; /* 3 */
+	-ms-text-size-adjust: 100%; /* 4 */
+	-webkit-text-size-adjust: 100%; /* 4 */
 }
 
 /*
- * Fixes text size displayed oddly after orientation change in handheld browsers
-*/
-
-@media screen and (max-device-width: 480px) {
-	html {
-		-ms-text-size-adjust: none;
-		-webkit-text-size-adjust: none;
-	}
-}
-
-/*
- * Remove margin and hide overflow from <body> element
+ * Remove margin from <body> element
+ * Improves margin displayed incorrectly in IE6/7
 */
 
 body {
