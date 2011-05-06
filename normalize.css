@@ -53,12 +53,13 @@ html {
 }
 
 /*
- * Remove margin from <body> element
+ * Remove margin and hide vertical overflow from <body> element
  * Improves margin displayed incorrectly in IE6/7
 */
 
 body {
 	margin: 0;
+	overflow-y: hidden;
 }
 
 /*
