@@ -11,6 +11,18 @@ textarea {
 	font: 12px/1.5 sans-serif;
 }
 
+body {
+	-ie-x: expression(
+		(this.clear != this.lastChild)
+		? (
+			this.clear = this.clear || document.createElement('wbr'),
+			this.appendChild(this.clear).style.cssText='display:block;clear:both;font:0;'
+		)
+		: void 0
+	);
+	zoom: 1;
+}
+
 /*
  * Sectioning content
 */
@@ -117,10 +129,22 @@ td {
 */
 
 hr {
+	*zoom: expression(
+		t = this,
+		t.runtimeStyle.zoom = 'normal',
+		hrx = document.createElement('hrx'),
+		t.parentNode.replaceChild(hrx, t),
+		hrx.appendChild(t)
+	);
+}
+
+hr,
+hrx {
 	background: #CCC;
 	border: 0;
+	display: block;
 	height: 1px;
-	margin: -1px 0 1em;
+	overflow: hidden;
 }
 
 /*
