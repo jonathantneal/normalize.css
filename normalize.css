@@ -31,7 +31,7 @@ textarea,
 video {
 	display: inline-block;
 	*display: inline;
-	vertical-align: top;
+	vertical-align: baseline;
 	*zoom: 1;
 }
 
@@ -146,12 +146,9 @@ mark {
 
 /*
  * Redeclare monospace font family to <pre> <code> <kbd> <samp> elements
- * 1.
- * Fixes font family set oddly in C10 S5
- * 2.
- * Fixes monospace font family set oddly in IE6
- * 3.
- * Fixes monospace line-height overflow in iOS
+ * 1. Fixes font family set oddly in C10 S5
+ * 2. Fixes monospace font family set oddly in IE6
+ * 3. Fixes monospace line-height overflow in iOS
 */
 
 pre,
@@ -176,10 +173,8 @@ pre {
 
 /*
  * Remove quotes from <q> element
- * 1.
- * Addresses CSS quotes not supported in IE6/7
- * 2.
- * Addresses quote attributes not supported in S4
+ * 1. Addresses CSS quotes not supported in IE6/7
+ * 2. Addresses quote attributes not supported in S4
 */
 
 /* 1 */
@@ -267,11 +262,13 @@ input::-moz-focus-inner {
 
 /*
  * Disable default vertical scrollbar for <textarea> element
- * Fixes scrollbar displayed oddly in IE6/7/8/9
+ * 1. Fixes scrollbar displayed oddly in IE6/7/8/9
+ * 2. Improves alignment displayed in all browsers
 */
 
 textarea {
-	overflow: auto;
+	overflow: auto; /* 1 */
+	vertical-align: top; /* 2 */
 }
 
 /*
