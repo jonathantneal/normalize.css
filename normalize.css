@@ -36,22 +36,26 @@ video {
 /*
  * 1. Add normal cursor
  *    Improves visual focus of page during mouse use in all browsers
- * 2. Add vertical scrollbar
+ * 2. Add 100% font size
+ *    Corrects text resizing oddly when font size is set using ems in IE6/7
+ *    http://clagnut.com/blog/348/#c790
+ * 3. Add vertical scrollbar
  *    Keeps page centered in all browsers regardless of content height
- * 3. Remove tap highlight color
+ * 4. Remove tap highlight color
  *    Improves visual appearance of containers during a delegated click 
  *    www.yuiblog.com/blog/2010/10/01/quick-tip-customizing-the-mobile-safari-tap-highlight-color/
- * 4. Define maximum text display as 100% to document
+ * 5. Define maximum text display as 100% to document
  *    Corrects text displayed oddly after orientation change in handheld browsers
  *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
  */
 
 html {
 	cursor: default; /* 1 */
-	overflow-y: scroll; /* 2 */
-	-webkit-tap-highlight-color: transparent; /* 3 */
-	-ms-text-size-adjust: 100%; /* 4 */
-	-webkit-text-size-adjust: 100%; /* 4 */
+	font-size: 100%; /* 2 */
+	overflow-y: scroll; /* 3 */
+	-webkit-tap-highlight-color: transparent; /* 4 */
+	-ms-text-size-adjust: 100%; /* 5 */
+	-webkit-text-size-adjust: 100%; /* 5 */
 }
 
 /* 
@@ -87,6 +91,7 @@ img {
 	-ms-interpolation-mode: bicubic; /* 2 */
 }
 
+
 /* =============================================================================
    Links
    ========================================================================== */
@@ -120,6 +125,7 @@ a:visited {
 	color: #551A8B;
 }
 
+
 /* =============================================================================
    Typography
    ========================================================================== */
@@ -143,10 +149,6 @@ strong {
 	font-weight: bold; 
 }
 
-blockquote {
-	margin: 1em 40px;
-}
-
 /*
  * Add italic font style
  * Corrects styling not present in S5 Chrome
@@ -162,7 +164,7 @@ dfn {
  */
 
 mark {
-	background-color: #FF0;
+	background: #FF0;
 	color: #000;
 }
 
@@ -176,8 +178,8 @@ pre,
 code,
 kbd,
 samp {
-	font-family: monospace, sans-serif;
-	_font-family: 'Courier New', monospace, sans-serif;
+	font-family: monospace, monospace;
+	_font-family: 'courier new', monospace;
 	font-size: 1em;
 }
 
@@ -195,7 +197,7 @@ pre {
 /*
  * Remove quotes
  * 1. Addresses CSS quotes not supported in IE6/7
- * 2. Addresses quote attributes not supported in S4
+ * 2. Addresses quote property not supported in S4
  */
 
 /* 1 */
@@ -243,6 +245,7 @@ sub {
 	bottom: -0.25em;
 }
 
+
 /* =============================================================================
    Lists
    ========================================================================== */
@@ -261,6 +264,7 @@ nav ul,
 nav ol {
 	list-style: none;
 }
+
 
 /* =============================================================================
    Figures
@@ -370,7 +374,16 @@ input[type="search"] {
 }
 
 /*
- * Remove inner padding and border
+ * Define no appearance
+ * Addresses inner padding displaying oddly in S5 Chrome on OSX
+ */
+
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/*
+ * Remove inner padding and border 
  * Fixes appearance displayed oddly in FF3/4
  * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
  */
