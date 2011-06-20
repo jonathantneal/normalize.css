@@ -3,7 +3,6 @@
    ========================================================================== */
 
 /*
- * Add block display for HTML5 elements
  * Corrects block display not defined in IE6/7/8/9 & FF3
  */
 
@@ -21,7 +20,6 @@ section {
 }
 
 /*
- * Add inline-block display for HTML5 elements
  * Corrects inline-block display not defined in IE6/7/8/9 & FF3
  */
 
@@ -34,18 +32,13 @@ video {
 }
 
 /*
- * 1. Add normal cursor
- *    Improves visual focus of page during mouse use in all browsers
- * 2. Add 100% font size
- *    Corrects text resizing oddly when font size is set using ems in IE6/7
+ * 1. Improves visual focus of page during mouse use in all browsers
+ * 2. Corrects text resizing oddly when font size is set using ems in IE6/7
  *    http://clagnut.com/blog/348/#c790
- * 3. Add vertical scrollbar
- *    Keeps page centered in all browsers regardless of content height
- * 4. Remove tap highlight color
- *    Improves visual appearance of containers during a delegated click 
+ * 3. Keeps page centered in all browsers regardless of content height
+ * 4. Improves visual appearance of containers during a delegated click 
  *    www.yuiblog.com/blog/2010/10/01/quick-tip-customizing-the-mobile-safari-tap-highlight-color/
- * 5. Define maximum text display as 100% to document
- *    Corrects text displayed oddly after orientation change in handheld browsers
+ * 5. Corrects text displayed oddly after orientation change in handheld browsers
  *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
  */
 
@@ -59,12 +52,9 @@ html {
 }
 
 /* 
- * 1. Define font as sans serif
- *    Addresses font family inconsistency between <textarea> and other set form elements
- * 2. Define font size as 100%
- *    Addresses text resizing ability in IE6/7 and consistency in form elements
- * 3. Remove margin
- *    Addresses margins handled incorrectly in IE6/7
+ * 1. Addresses font family inconsistency between <textarea> and other set form elements
+ * 2. Addresses text resizing ability in IE6/7 and consistency in form elements
+ * 3. Addresses margins handled incorrectly in IE6/7
  *    Addresses form element margins set oddly in FF3/4 S5 Chrome
  */
 
@@ -79,10 +69,8 @@ textarea {
 }
 
 /*
- * 1. Remove border
- *    Improves readability when inside <a> element in all browsers
- * 2. Add high quality bicubic image resampling
- *    Improves visual appearance when scaled in IE7
+ * 1. Improves readability when inside <a> element in all browsers
+ * 2. Improves visual appearance when scaled in IE7
  *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
  */
 
@@ -97,7 +85,6 @@ img {
    ========================================================================== */
 
 /*
- * Remove outline
  * Improves appearance when active or hovered in all browsers
  * people.opera.com/patrickl/experiments/keyboard/test
  */
@@ -109,7 +96,6 @@ a:hover {
 }
 
 /*
- * Define outline as thin dotted
  * Improves appearance displayed oddly in C10
 */
 
@@ -131,7 +117,6 @@ a:visited {
    ========================================================================== */
 
 /*
- * Add bottom border
  * Corrects styling not present in IE7/8/9 S5 Chrome
  */
 
@@ -140,7 +125,6 @@ abbr[title] {
 }
 
 /*
- * Define font weight as bold
  * Corrects style set incorrectly to 'bolder' in FF3/4 S4/5 C10
 */
 
@@ -150,7 +134,6 @@ strong {
 }
 
 /*
- * Add italic font style
  * Corrects styling not present in S5 Chrome
  */
 
@@ -159,7 +142,6 @@ dfn {
 }
 
 /*
- * Add yellow background and black text
  * Corrects styling not present in IE6/7/8/9
  */
 
@@ -169,7 +151,6 @@ mark {
 }
 
 /*
- * Define font family as monospace
  * Corrects font family set oddly in IE6 S5 C10
  * en.wikipedia.org/wiki/User:Davidgothberg/Test59
  */
@@ -184,7 +165,6 @@ samp {
 }
 
 /*
- * Add line wrapping
  * Improves readability of pre-formatted text in all browsers
  */
 
@@ -195,7 +175,6 @@ pre {
 }
 
 /*
- * Remove quotes
  * 1. Addresses CSS quotes not supported in IE6/7
  * 2. Addresses quote property not supported in S4
  */
@@ -215,7 +194,6 @@ q:after {
 }
 
 /*
- * Define font size
  * Improves appearance in all browsers
  */
 
@@ -224,7 +202,6 @@ small {
 }
 
 /*
- * Define font size and alignment
  * Improves appearance without affecting line-height in all browsers
  * gist.github.com/413930
  */
@@ -250,16 +227,6 @@ sub {
    Lists
    ========================================================================== */
 
-ul,
-ol {
-	margin: 1em 0;
-	padding: 0 0 0 40px;
-}
-
-dd {
-	margin: 0 0 0 40px;
-}
-
 nav ul,
 nav ol {
 	list-style: none;
@@ -271,7 +238,6 @@ nav ol {
    ========================================================================== */
 
 /*
- * Define margin
  * Improves margin displayed oddly in IE6/7/8/9, S5, O11
  */
 
@@ -284,8 +250,7 @@ figure {
    ========================================================================== */
 
 /*
- * Remove margin
- * Corrects styling in IE6/7
+ * Corrects margin displayed oddly in IE6/7
  */
 
 form {
@@ -293,16 +258,6 @@ form {
 }
 
 /*
- * Define consistent margin and padding
- */
-
-fieldset {
-	margin: 0 2px;
-	padding: 0.35em 0.625em 0.75em;
-}
-
-/*
- * Add negative left margin
  * Corrects alignment displayed oddly in IE6/7
  */
 
@@ -311,22 +266,20 @@ legend {
 }
 
 /*
- * Define consistent vertical alignment display in all browsers
+ * Improves appearance and consistency in all browsers
  */
 
 button,
 input,
 select,
 textarea {
-	vertical-align: baseline; /* 3 */
-	*vertical-align: middle; /* 3 */
+	vertical-align: baseline;
+	*vertical-align: middle;
 }
 
 /*
- * 1. Define line-height as normal
- *    Corrects FF3/4 setting it using !important in the UA stylesheet
- * 2. Make visible overflow
- *    Fixes spacing displayed oddly in IE6/7
+ * 1. Corrects FF3/4 setting it using !important in the UA stylesheet
+ * 2. Fixes spacing displayed oddly in IE6/7
  */
 
 button,
@@ -336,10 +289,8 @@ input {
 }
 
 /*
- * 1. Display hand cursor for clickable form elements
- *    Improves usability and consistency of cursor style between image-type <input> and others
- * 2. Define appearance for clickable form elements
- *    Corrects inability to style clickable <input> types in iOS
+ * 1. Improves usability and consistency of cursor style between image-type <input> and others
+ * 2. Corrects inability to style clickable <input> types in iOS
  */
 
 button,
@@ -351,7 +302,6 @@ input[type="submit"] {
 }
 
 /*
- * Define box sizing
  * Addresses box sizing set to content-box in IE8/9
  */
 
@@ -361,7 +311,6 @@ input[type="radio"] {
 }
 
 /*
- * Define box sizing and appearance
  * Addresses box sizing set to border-box in S5 Chrome (include -moz to future-proof)
  * Addresses appearance set to searchfield in S5 Chrome
  */
@@ -374,7 +323,6 @@ input[type="search"] {
 }
 
 /*
- * Define no appearance
  * Addresses inner padding displaying oddly in S5 Chrome on OSX
  */
 
@@ -383,7 +331,6 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 /*
- * Remove inner padding and border 
  * Fixes appearance displayed oddly in FF3/4
  * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
  */
@@ -395,10 +342,8 @@ input::-moz-focus-inner {
 }
 
 /*
- * 1. Disable default vertical scrollbar
- *    Corrects scrollbar displayed oddly in IE6/7/8/9
- * 2. Add top vertical alignment
- *    Improves readability and aligment in all browsers
+ * 1. Corrects scrollbar displayed oddly in IE6/7/8/9
+ * 2. Improves readability and aligment in all browsers
  */
 
 textarea {
@@ -411,18 +356,10 @@ textarea {
    ========================================================================== */
 
 /* 
- * Remove spacing between table cells
- * Improves vertical and horizontal alignment in all browsers
+ * Improves visual appearance in all browsers
  */
 
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}
-
-th,
-td {
-	padding: 0;
-	text-align: left;
-	vertical-align: middle;
 }
