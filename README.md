@@ -8,7 +8,9 @@ Installation
 
 Include this code somewhere in the HEAD of your document.
 
-    <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+    <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.min.css" />
+
+normalize.min.css gzipped is 822 bytes.
 
 Contributing
 ------------
@@ -18,6 +20,6 @@ Want to contribute? Great! Let me know with an Issue or a Pull Request.
 Links
 ------------
 
-[normalize.css on GoogleCode](https://normalize-css.googlecode.com/)
-
 [normalize.css on GitHub](https://github.com/jonathantneal/normalize.css)
+
+[normalize.css on GoogleCode](https://normalize-css.googlecode.com/)
