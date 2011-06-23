@@ -1,7 +1,7 @@
 /* =============================================================================
    normalize.css
-   2011-06-21T09:50 UTC
-   https://github.com/jonathantneal/normalize.css
+   2011-06-23T00:50 UTC
+   //github.com/jonathantneal/normalize.css
 
    Normalize.css is a customisable CSS file that makes browsers render all
    elements more consistently and in line with modern standards. We researched
@@ -244,12 +244,11 @@ canvas,
 video {
 	display: inline-block;
 	*display: inline;
-	*zoom: 1;
 }
 
 audio {
 	display: none;
-	*display: expression(this.controls ? 'inline' : 'none');
+	_display: expression(this.controls ? 'inline' : 'none');
 	*zoom: 1;
 }
 
@@ -304,22 +303,22 @@ textarea {
 /*
  * 1. Corrects FF3/4 setting it using !important in the UA stylesheet
  * 2. Corrects spacing displayed oddly in IE6/7
+ * 3. Corrects inability to style clickable 'input' types in iOS
  */
 
 button,
 input {
 	line-height: normal; /* 1 */
-	*overflow: expression(this.type == 'button|reset|submit' ? 'visible' : '');
+	_overflow: expression(this.type == 'button|reset|submit' ? 'visible' : ''); /* 2 */
 }
 
-/*
- * Corrects inability to style clickable 'input' types in iOS
- */
+/* 3 */
 
 button,
 input[type="button"], 
 input[type="reset"], 
 input[type="submit"] {
+	overflow: visible;
 	-webkit-appearance: button;
 }
 
