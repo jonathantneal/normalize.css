@@ -43,19 +43,6 @@ section {
 }
 
 /*
- * Corrects inline-block display not defined in IE6/7/8/9 & FF3
- * Known limitation: IE6 will not apply style for 'audio[controls]'
- */
-
-audio[controls],
-canvas,
-video {
-	display: inline-block;
-	*display: inline;
-	*zoom: 1;
-}
-
-/*
  * 1. Improves visual focus of mouse in all browsers
  * 2. Corrects text resizing oddly when font size is set using ems in IE6/7
  *    http://clagnut.com/blog/348/#c790
@@ -92,17 +79,6 @@ textarea {
 	margin: 0; /* 2 */
 }
 
-/*
- * 1. Improves readability when inside 'a' in all browsers
- * 2. Improves visual appearance when scaled in IE7
- *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
- */
-
-img {
-	border: 0; /* 1 */
-	-ms-interpolation-mode: bicubic; /* 2 */
-}
-
 
 /* =============================================================================
    Links
@@ -133,9 +109,12 @@ a:focus {
    ========================================================================== */
 
 /*
- * Corrects styling not present in IE7/8/9 S5 C10
- * Known limitation: IE6 will not apply style for 'abbr[title]'
+ * Corrects styling not present in IE6/7/8/9 S5 C10
  */
+
+abbr {
+	_border-bottom: expression(this.title ? '1px dotted' : 'none');
+}
 
 abbr[title] {
 	border-bottom: 1px dotted;
@@ -252,6 +231,51 @@ nav ul {
 	list-style: none;
 }
 
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+
+/*
+ * Corrects display not defined in IE6/7/8/9 & FF3
+ */
+
+audio[controls],
+canvas,
+video {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+audio {
+	display: none;
+	*display: expression(this.controls ? 'inline' : 'none');
+	*zoom: 1;
+}
+
+audio[controls] {
+	display: inline-block;
+}
+
+/*
+ * 1. Improves readability when inside 'a' in all browsers
+ * 2. Improves visual appearance when scaled in IE7
+ *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+
+img {
+	border: 0; /* 1 */
+	-ms-interpolation-mode: bicubic; /* 2 */
+}
+
+/*
+ * Corrects overflow displayed oddly in IE9 
+ */
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
 
 /* =============================================================================
    Forms
@@ -285,7 +309,7 @@ textarea {
 button,
 input {
 	line-height: normal; /* 1 */
-	*overflow: visible;  /* 2 */
+	*overflow: expression(this.type == 'button|reset|submit' ? 'visible' : '');
 }
 
 /*
