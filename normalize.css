@@ -318,8 +318,8 @@ button,
 input[type="button"], 
 input[type="reset"], 
 input[type="submit"] {
-	overflow: visible;
 	-webkit-appearance: button;
+	overflow: visible;
 }
 
 /*
