@@ -10,7 +10,7 @@ Include this code somewhere in the HEAD of your document.
 
     <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.min.css" />
 
-Good news, everyone! **normalize.min.css** gzipped is 822 bytes.
+Good news, everyone! **normalize.min.css** gzipped is 986 bytes.
 
 Contributing
 ------------
