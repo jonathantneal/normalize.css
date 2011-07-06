@@ -296,6 +296,8 @@ button,
 input,
 select,
 textarea {
+	-webkit-appearance: none;
+	border-radius: 0;
 	vertical-align: baseline;
 	*vertical-align: middle;
 }
@@ -318,7 +320,6 @@ button,
 input[type="button"], 
 input[type="reset"], 
 input[type="submit"] {
-	-webkit-appearance: button;
 	overflow: visible;
 }
 
@@ -332,12 +333,11 @@ input[type="radio"] {
 }
 
 /*
- * Addresses appearance set oddly to searchfield in S5 iOS C10
+ * Addresses sizing set oddly to searchfield in S5 iOS C10
  * Known issue: -moz included to future-proof
  */
 
 input[type="search"] {
-	-webkit-appearance: textfield;
 	-moz-box-sizing: content-box;
 	-webkit-box-sizing: content-box;
 	box-sizing: content-box;
