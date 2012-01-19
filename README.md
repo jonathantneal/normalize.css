@@ -10,9 +10,6 @@ Include one of these in the HEAD of your document to use the latest **normalize.
 
 ``<link rel="stylesheet" href="//normalize-css.googlecode.com/svn/trunk/normalize.min.css" />``
 
-
-``<link rel="stylesheet" href="//raw.github.com/jonathantneal/normalize.css/master/normalize.min.css" />``
-
 Good news, everyone! **normalize.min.css** gzipped is 947 bytes.
 
 Contributing
